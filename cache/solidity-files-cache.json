@@ -2,11 +2,11 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/distro/work/web3/hardhat/lottery/contracts/Raffle.sol": {
-      "lastModificationDate": 1664980013781,
-      "contentHash": "58fc0171bbbe84f135a87f96591c6b29",
+      "lastModificationDate": 1664993911015,
+      "contentHash": "681b852ff06faf66efb2de68ad7c3161",
       "sourceName": "contracts/Raffle.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -36,9 +36,10 @@
         }
       },
       "imports": [
-        "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol",
         "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol",
-        "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol"
+        "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol",
+        "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol",
+        "hardhat/console.sol"
       ],
       "versionPragmas": [
         "^0.8.7"
@@ -47,12 +48,54 @@
         "Raffle"
       ]
     },
+    "/Users/distro/work/web3/hardhat/lottery/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1664967613412,
+      "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">= 0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
     "/Users/distro/work/web3/hardhat/lottery/node_modules/@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol": {
-      "lastModificationDate": 1664972596812,
+      "lastModificationDate": 1664995372578,
       "contentHash": "eb9cc526ef59dfc4d644f56ddca0633a",
       "sourceName": "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -89,12 +132,54 @@
         "VRFConsumerBaseV2"
       ]
     },
+    "/Users/distro/work/web3/hardhat/lottery/node_modules/@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol": {
+      "lastModificationDate": 1664995372665,
+      "contentHash": "bdbf3e274e50272d9c830fa414fcbec9",
+      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "KeeperCompatibleInterface"
+      ]
+    },
     "/Users/distro/work/web3/hardhat/lottery/node_modules/@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol": {
-      "lastModificationDate": 1664972596920,
-      "contentHash": "8c9ed3426b676f67ee200a2bec96e224",
+      "lastModificationDate": 1664995372665,
+      "contentHash": "56ec852a2aeddf81bf5a5720a7fc6a63",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -131,12 +216,12 @@
         "VRFCoordinatorV2Interface"
       ]
     },
-    "/Users/distro/work/web3/hardhat/lottery/node_modules/@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol": {
-      "lastModificationDate": 1664972596920,
-      "contentHash": "fc398ecdfc4d9dd8ebb15889e8d61f20",
-      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol",
+    "/Users/distro/work/web3/hardhat/lottery/node_modules/@chainlink/contracts/src/v0.8/mocks/VRFCoordinatorV2Mock.sol": {
+      "lastModificationDate": 1664995372665,
+      "contentHash": "0e99ed258a59dc48bc432008b39453cd",
+      "sourceName": "@chainlink/contracts/src/v0.8/mocks/VRFCoordinatorV2Mock.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -166,19 +251,23 @@
         }
       },
       "imports": [
-        "./AutomationCompatibleInterface.sol"
+        "../interfaces/LinkTokenInterface.sol",
+        "../interfaces/VRFCoordinatorV2Interface.sol",
+        "../VRFConsumerBaseV2.sol"
       ],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.4"
       ],
-      "artifacts": []
+      "artifacts": [
+        "VRFCoordinatorV2Mock"
+      ]
     },
-    "/Users/distro/work/web3/hardhat/lottery/node_modules/@chainlink/contracts/src/v0.8/interfaces/AutomationCompatibleInterface.sol": {
-      "lastModificationDate": 1664972596920,
-      "contentHash": "c52969cee392918edbf23f914e01c0dc",
-      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/AutomationCompatibleInterface.sol",
+    "/Users/distro/work/web3/hardhat/lottery/node_modules/@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol": {
+      "lastModificationDate": 1664995372665,
+      "contentHash": "da5a0c3bd86c896f6a407f909c57edf3",
+      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -212,8 +301,50 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "AutomationCompatibleInterface"
+        "LinkTokenInterface"
       ]
+    },
+    "/Users/distro/work/web3/hardhat/lottery/contracts/test/VRFCoordinatorV2Mock.sol": {
+      "lastModificationDate": 1664991883577,
+      "contentHash": "885fd4c64708e05dc03a0d04fdd4291d",
+      "sourceName": "contracts/test/VRFCoordinatorV2Mock.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@chainlink/contracts/src/v0.8/mocks/VRFCoordinatorV2Mock.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": []
     }
   }
 }
